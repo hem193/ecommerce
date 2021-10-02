@@ -19,7 +19,7 @@ const URL = `mongodb://${username}:${password}@cluster0-shard-00-00.os6ef.mongod
 
 Connection(process.env.MONGODB_URI || URL);
 
-if (process.env.NODE_ENV == "production") {
+if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 app.listen(PORT, () =>
